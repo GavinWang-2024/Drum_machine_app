@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+<img width="1514" alt="Screenshot 2024-08-23 at 11 52 09 AM" src="https://github.com/user-attachments/assets/724b943b-b2f5-40f3-8e05-4339ca3dba14">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Drum Machine App
 
-Currently, two official plugins are available:
+This is a simple and interactive Drum Machine web application built with React and TypeScript. Users can play various drum sounds by pressing the corresponding keys on their keyboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Responsive Design:** The application is designed to be visually appealing and user-friendly on all devices.
+- **Keyboard Control:** Play sounds by pressing the keys on your keyboard.
+- **Interactive UI:** The drum pads move when pressed, providing a visual cue.
+- **Real-time Display:** The name of the drum sound is displayed in real-time when a pad is pressed.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Project Structure
 
-- Configure the top-level `parserOptions` property like this:
+- **index.html**: The main HTML file that includes the root element where the React app is mounted.
+- **index.css**: Defines the global styles and variables.
+- **app.css**: Contains specific styles for the Drum Machine components.
+- **App.tsx**: The main React component that renders the Drum Machine UI and handles user interactions.
+- **Drum.tsx**: A React component responsible for rendering individual drum pads.
+- **types.ts**: Defines the TypeScript types used in the application.
+- **main.tsx**: The entry point of the React application.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Getting Started
+
+
+## Installation
+
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/GavinWang-2024/Drum_machine_app.git
+   cd random-quote-generator
+
+2. **Install dependencies:**
+   
+Ensure Node.js installed, then run:
+```
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Start the development server:
+```
+npm run dev
 ```
